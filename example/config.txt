@@ -1,0 +1,2 @@
+Prefix plugins/MutationTime/example/
+Plugin MutationTime inputfile parameters.txt outputfile output.pdf
