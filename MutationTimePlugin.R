@@ -54,5 +54,8 @@ mcols(cn_timed) <- cbind(mcols(cn_timed),mt$T)
 info(header(vcf)) <- rbind(info(header(vcf)),MutationTimeR:::mtHeader())
 info(vcf) <- cbind(info(vcf), mt$V)
 
+#print(str(vcf))
+write.csv(vcf@info@listData$CNF, paste(outputfile, "csv", sep="."))
 plotSample(vcf,cn_timed)
+
 }
